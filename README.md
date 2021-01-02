@@ -1,12 +1,28 @@
+    for not rpi4
+    
     cd ~/
 
     git clone https://github.com/sun-23/MZDPI.git
 
     cd MZDPI/vga
 
-    sudo chmod +x mzdpi-vga-autoinstall-offline
+    sudo chmod +x mzdpi-vga-autoinstall-online
 
-    sudo ./mzdpi-vga-autoinstall-offline
+    sudo ./mzdpi-vga-autoinstall-online
+
+    sudo reboot
+    
+    for rpi4
+    
+    cd ~/
+
+    git clone https://github.com/sun-23/MZDPI.git
+
+    cd MZDPI/vga
+
+    sudo chmod +x mzdpi-vga-autoinstall-rpi4-online
+
+    sudo ./mzdpi-vga-autoinstall-rpi4-online
 
     sudo reboot
     
