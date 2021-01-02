@@ -19,10 +19,22 @@
     git clone https://github.com/sun-23/MZDPI.git
 
     cd MZDPI/vga
-
+    sudo chmod +x mzdpi-vga-uninstall-rpi4
+    sudo chmod +x mzdpi-vga-uninstall
+    
+    /---------------------/
     sudo chmod +x mzdpi-vga-autoinstall-rpi4-online
 
     sudo ./mzdpi-vga-autoinstall-rpi4-online
+    /---------------------/
+    
+    or 
+    
+    /---------------------/
+    sudo chmod +x mzdpi-vga-autoinstall-rpi4-offline
+
+    sudo ./mzdpi-vga-autoinstall-rpi4-offline
+    /---------------------/
 
     sudo reboot
     
