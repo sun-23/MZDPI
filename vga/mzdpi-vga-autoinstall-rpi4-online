@@ -258,7 +258,7 @@ sed  -i "/dpi_mode=/d" /boot/tmp.txt
 sed  -i "/dpi_output_format=/d" /boot/tmp.txt
 sed  -i "/hdmi_timings=/d" /boot/tmp.txt
 
-echo "gpio=18=op,dh,pd" >> /boot/tmp.txt
+echo "gpio=18-19=op,dh,pd" >> /boot/tmp.txt
 echo "gpio=0-8=a2" >> /boot/tmp.txt
 echo "gpio=12-17=a2" >> /boot/tmp.txt
 echo "gpio=20-24=a2" >> /boot/tmp.txt
