@@ -255,8 +255,10 @@ cp /boot/tmp.txt /etc/rc.local
 
 cp /boot/config.txt /boot/tmp.txt
 
-sed  -i "/gpio=18=/d" /boot/tmp.txt
-sed  -i "/gpio=7-8=/d" /boot/tmp.txt
+sed  -i "/gpio=18-19=/d" /boot/tmp.txt
+sed  -i "/gpio=0-8=/d" /boot/tmp.txt
+sed  -i "/gpio=12-17=/d" /boot/tmp.txt
+sed  -i "/gpio=20-24=/d" /boot/tmp.txt
 sed  -i "/dtparam=spi=/d" /boot/tmp.txt
 sed  -i "/dtoverlay=ads7846/d" /boot/tmp.txt
 sed  -i "/display_rotate=/d" /boot/tmp.txt
@@ -270,8 +272,10 @@ sed  -i "/dpi_mode=/d" /boot/tmp.txt
 sed  -i "/dpi_output_format=/d" /boot/tmp.txt
 sed  -i "/hdmi_timings=/d" /boot/tmp.txt
 
-echo "gpio=18=op,dh" >> /boot/tmp.txt
-echo "gpio=7-8=a2" >> /boot/tmp.txt
+echo "gpio=18-19=op,dh,pd" >> /boot/tmp.txt
+echo "gpio=0-8=a2" >> /boot/tmp.txt
+echo "gpio=12-17=a2" >> /boot/tmp.txt
+echo "gpio=20-24=a2" >> /boot/tmp.txt
 echo "dtparam=spi=on" >> /boot/tmp.txt
 echo "dtoverlay=ads7846,penirq=27,swapxy=1,xmin=200,xmax=3850,ymin=200,ymax=3850" >> /boot/tmp.txt
 echo "display_rotate=3" >> /boot/tmp.txt
@@ -282,7 +286,7 @@ echo "enable_dpi_lcd=1" >> /boot/tmp.txt
 echo "display_default_lcd=1" >> /boot/tmp.txt
 echo "dpi_group=2" >> /boot/tmp.txt
 echo "dpi_mode=87" >> /boot/tmp.txt
-echo "dpi_output_format=0x07f003" >> /boot/tmp.txt
+echo "dpi_output_format=0x07f203" >> /boot/tmp.txt
 echo "hdmi_timings=480 0 41 20 60 640 0 5 10 10 0 0 0 60 0 32000000 1" >> /boot/tmp.txt
 
 cp /boot/tmp.txt /boot/config.txt
