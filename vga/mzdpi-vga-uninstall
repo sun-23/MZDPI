@@ -1,0 +1,76 @@
+#!/bin/sh
+
+DTBFILE=/boot/bcm2708-rpi-0-w.bak
+if [ -f "$DTBFILE" ];then
+	cp $DTBFILE /boot/bcm2708-rpi-0-w.dtb
+fi
+
+
+DTBFILE=/boot/bcm2708-rpi-0.bak
+if [ -f "$DTBFILE" ];then
+	cp $DTBFILE /boot/bcm2708-rpi-0.dtb
+fi
+
+DTBFILE=/boot/bcm2708-rpi-zero-w.bak
+if [ -f "$DTBFILE" ];then
+	cp $DTBFILE /boot/bcm2708-rpi-zero-w.dtb
+fi
+
+
+DTBFILE=/boot/bcm2708-rpi-zero.bak
+if [ -f "$DTBFILE" ];then
+	cp $DTBFILE /boot/bcm2708-rpi-zero.dtb
+fi
+
+DTBFILE=/boot/bcm2708-rpi-b-plus.bak
+if [ -f "$DTBFILE" ];then
+	cp $DTBFILE /boot/bcm2708-rpi-b-plus.dtb
+fi
+
+DTBFILE=/boot/bcm2708-rpi-cm.bak
+if [ -f "$DTBFILE" ];then
+	cp $DTBFILE /boot/bcm2708-rpi-cm.dtb
+fi
+
+DTBFILE=/boot/bcm2709-rpi-2-b.bak
+if [ -f "$DTBFILE" ];then
+	cp $DTBFILE /boot/bcm2709-rpi-2-b.dtb
+fi
+
+DTBFILE=/boot/bcm2710-rpi-3-b.bak
+if [ -f "$DTBFILE" ];then
+	cp $DTBFILE /boot/bcm2710-rpi-3-b.dtb
+fi
+
+DTBFILE=/boot/bcm2710-rpi-3-b-plus.bak
+if [ -f "$DTBFILE" ];then
+	cp $DTBFILE /boot/bcm2710-rpi-3-b-plus.dtb
+fi
+
+DTBFILE=/boot/bcm2710-rpi-cm3.bak
+if [ -f "$DTBFILE" ];then
+	cp $DTBFILE /boot/bcm2710-rpi-cm3.dtb
+fi
+
+cp /etc/rc.local /boot/tmp.txt
+sed  -i "/sudo raspi-gpio set/d" /boot/tmp.txt
+cp /boot/tmp.txt /etc/rc.local 
+
+cp /boot/config.txt /boot/tmp.txt
+
+sed  -i "/gpio=7-8=/d" /boot/tmp.txt
+sed  -i "/dtparam=spi=/d" /boot/tmp.txt
+sed  -i "/dtoverlay=ads7846/d" /boot/tmp.txt
+sed  -i "/display_rotate=/d" /boot/tmp.txt
+sed  -i "/dtoverlay=mzdpi/d" /boot/tmp.txt
+sed  -i "/framebuffer_width=/d" /boot/tmp.txt
+sed  -i "/framebuffer_height=/d" /boot/tmp.txt
+sed  -i "/enable_dpi_lcd=/d" /boot/tmp.txt
+sed  -i "/display_default_lcd=/d" /boot/tmp.txt
+sed  -i "/dpi_group=/d" /boot/tmp.txt
+sed  -i "/dpi_mode=/d" /boot/tmp.txt
+sed  -i "/dpi_output_format=/d" /boot/tmp.txt
+sed  -i "/hdmi_timings=/d" /boot/tmp.txt
+
+cp /boot/tmp.txt /boot/config.txt
+rm /boot/tmp.txt
