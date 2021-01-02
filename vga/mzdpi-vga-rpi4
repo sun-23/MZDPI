@@ -58,7 +58,10 @@ cp /boot/tmp.txt /etc/rc.local
 
 cp /boot/config.txt /boot/tmp.txt
 
-sed  -i "/gpio=7-8=/d" /boot/tmp.txt
+sed  -i "/gpio=18-19=/d" /boot/tmp.txt
+sed  -i "/gpio=0-8=/d" /boot/tmp.txt
+sed  -i "/gpio=12-17=/d" /boot/tmp.txt
+sed  -i "/gpio=20-24=/d" /boot/tmp.txt
 sed  -i "/dtparam=spi=/d" /boot/tmp.txt
 sed  -i "/dtoverlay=ads7846/d" /boot/tmp.txt
 sed  -i "/display_rotate=/d" /boot/tmp.txt
