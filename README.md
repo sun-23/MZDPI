@@ -44,4 +44,6 @@
     
     
     or use python app for rpi4
-    open termianl and run python3 ./path/ChangeScreen.py
+    open termianl and type following commands
+    
+    python3 ./path/ChangeScreen.py
