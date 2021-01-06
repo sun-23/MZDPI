@@ -47,3 +47,6 @@
     open termianl and type following commands
     
     python3 ./path/ChangeScreen.py
+    
+    or drag ChangeScreen folder to home/pi(user)/ directory
+    and drag changeScreen.ddsktop in ChangeScreen folder to desktop
