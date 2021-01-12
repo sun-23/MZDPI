@@ -3,6 +3,8 @@
     cd ~/
 
     git clone https://github.com/sun-23/MZDPI.git
+    
+    chmod -R 755 MZDPI/vga
 
     cd MZDPI/vga
 
