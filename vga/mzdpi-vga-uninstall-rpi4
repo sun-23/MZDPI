@@ -58,6 +58,7 @@ cp /boot/tmp.txt /etc/rc.local
 
 cp /boot/config.txt /boot/tmp.txt
 
+sed  -i "/dtoverlay=vc4-fkms-v3d/d" /boot/tmp.txt
 sed  -i "/gpio=18-19=/d" /boot/tmp.txt
 sed  -i "/gpio=0-8=/d" /boot/tmp.txt
 sed  -i "/gpio=12-17=/d" /boot/tmp.txt
@@ -74,6 +75,8 @@ sed  -i "/dpi_group=/d" /boot/tmp.txt
 sed  -i "/dpi_mode=/d" /boot/tmp.txt
 sed  -i "/dpi_output_format=/d" /boot/tmp.txt
 sed  -i "/hdmi_timings=/d" /boot/tmp.txt
+
+echo "dtoverlay=vc4-fkms-v3d" >> /boot/tmp.txt
 
 cp /boot/tmp.txt /boot/config.txt
 rm /boot/tmp.txt
