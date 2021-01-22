@@ -241,6 +241,7 @@ cp /boot/tmp.txt /etc/rc.local
 
 cp /boot/config.txt /boot/tmp.txt
 
+sed  -i "/dtoverlay=vc4-fkms-v3d/d" /boot/tmp.txt
 sed  -i "/gpio=18-19=/d" /boot/tmp.txt
 sed  -i "/gpio=0-8=/d" /boot/tmp.txt
 sed  -i "/gpio=12-17=/d" /boot/tmp.txt
