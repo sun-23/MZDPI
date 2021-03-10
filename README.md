@@ -52,3 +52,6 @@
     
     or drag ChangeScreen folder to home/pi(user)/ directory
     and drag changescreen.desktop in ChangeScreen folder to desktop
+    and add to share application another user can use this app type 
+     sudo su
+     sudo cp -R /home/pi/Desktop/changescreen.desktop /usr/share/applications/
